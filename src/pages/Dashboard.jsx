@@ -55,7 +55,6 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      {/* HEADER */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-blue-600">
           My Blogs
@@ -63,13 +62,12 @@ export default function Dashboard() {
 
         <button
           onClick={() => navigate("/summarizer")}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 cursor-pointer"
         >
           + New Blog
         </button>
       </div>
 
-      {/* STATS */}
       <p className="mb-4 text-gray-600">
         Total Blogs:{" "}
         <b className="text-black">
@@ -77,7 +75,6 @@ export default function Dashboard() {
         </b>
       </p>
 
-      {/* SEARCH */}
       <input
         type="text"
         placeholder="Search summaries..."
@@ -86,14 +83,12 @@ export default function Dashboard() {
         className="mb-6 w-full md:w-1/3 p-2 border rounded"
       />
 
-      {/* EMPTY */}
       {filtered.length === 0 && (
         <p className="text-gray-500 text-center">
           No blogs found.
         </p>
       )}
 
-      {/* LIST */}
       <div className="grid md:grid-cols-2 gap-5">
         {filtered.map((item) => (
           <div
@@ -101,7 +96,7 @@ export default function Dashboard() {
   className="bg-white rounded-2xl shadow-sm hover:shadow-md transition 
              border border-gray-100 flex flex-col h-[300px]"
 >
-  {/* TOP */}
+
   <div className="flex items-center justify-between px-5 pt-4">
     <p className="text-xs text-gray-400">
       {item.createdAt?.toDate().toLocaleDateString()}
@@ -109,25 +104,22 @@ export default function Dashboard() {
 
     <button
       onClick={() => handleDelete(item.id)}
-      className="text-gray-400 hover:text-red-500 text-xs transition"
+      className="text-gray-400 hover:text-red-500 text-xs transition cursor-pointer"
     >
       Delete
     </button>
   </div>
 
-  {/* TITLE */}
   <div className="px-5 mt-2">
     <h2 className="font-semibold text-gray-800 text-sm line-clamp-1">
       {item.originalText || "Untitled Blog"}
     </h2>
   </div>
 
-  {/* SUMMARY */}
   <div className="px-5 mt-3 flex-1 overflow-y-auto text-sm text-gray-600 leading-relaxed">
     {item.summary}
   </div>
 
-  {/* FOOTER */}
   <div className="px-5 py-3 border-t flex items-center justify-between text-xs">
     <span className="text-gray-400">
       {item.wordCount} words

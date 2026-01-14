@@ -104,27 +104,25 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* TITLE */}
               {blog.title && (
                 <h2 className="font-semibold text-gray-800 mb-2 line-clamp-2">
                   {blog.title}
                 </h2>
               )}
 
-              {/* SUMMARY (SCROLLABLE) */}
               <div className="text-sm text-gray-700 mb-4 overflow-y-auto flex-1 pr-1">
                 <pre className="whitespace-pre-wrap">
                   {blog.summary}
                 </pre>
               </div>
 
-              {/* ACTIONS */}
               <div className="flex justify-between items-center pt-3 border-t">
                 <div className="flex gap-4 text-gray-600">
                   <button
                     onClick={() =>
                       handleCopy(blog.summary, blog.id)
                     }
+                    className="cursor-pointer"
                     title="Copy"
                   >
                     <FiCopy />
@@ -134,6 +132,7 @@ export default function Home() {
                     onClick={() =>
                       handleShare(blog.summary)
                     }
+                    className="cursor-pointer"
                     title="Share"
                   >
                     <FiShare2 />
@@ -143,6 +142,7 @@ export default function Home() {
                     onClick={() =>
                       handleDownload(blog.summary)
                     }
+                    className="cursor-pointer"
                     title="Download"
                   >
                     <FiDownload />
@@ -153,7 +153,7 @@ export default function Home() {
                   onClick={() =>
                     navigate(`/blog/${blog.id}`)
                   }
-                  className="flex items-center gap-1 text-sm text-blue-600 hover:underline"
+                  className="flex items-center gap-1 text-sm text-blue-600 hover:underline cursor-pointer"
                 >
                   <FiEye /> View
                 </button>

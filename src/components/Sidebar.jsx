@@ -25,7 +25,6 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 min-h-screen bg-[#000] text-white flex flex-col">
-      {/* PROFILE */}
       <div className="flex flex-col items-center py-8 border-b border-white/10">
   <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-2xl font-bold">
     {user?.email?.[0]?.toUpperCase() || "U"}
@@ -41,7 +40,6 @@ export default function Sidebar() {
 </div>
 
 
-      {/* MENU */}
       <nav className="mt-6 flex-1 px-3 space-y-2">
         {menu.map((item) => (
           <NavLink

@@ -59,14 +59,14 @@ export default function Signup() {
             required
           />
 
-          <button className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
+          <button className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 cursor-pointer">
             Sign Up
           </button>
         </form>
 
         <button
           onClick={handleGoogleSignup}
-          className="w-full mt-4 border py-3 rounded hover:bg-gray-100"
+          className="w-full mt-4 border py-3 rounded hover:bg-gray-100 cursor-pointer"
         >
           Sign up with Google
         </button>

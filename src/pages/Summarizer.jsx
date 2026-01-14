@@ -56,9 +56,7 @@ export default function Summarizer() {
       </h1>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {/* INPUT */}
         <div className="bg-white p-6 rounded-xl shadow">
-          {/* USER INFO */}
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
               {user?.email[0].toUpperCase()}
@@ -106,13 +104,12 @@ export default function Summarizer() {
           <button
             onClick={handleSummarize}
             disabled={loading}
-            className="mt-5 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700"
+            className="mt-5 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 cursor-pointer"
           >
             {loading ? "Summarizing..." : "Publish Blog"}
           </button>
         </div>
 
-        {/* OUTPUT */}
         <div className="bg-white p-6 rounded-xl shadow relative">
           <h2 className="text-xl font-semibold mb-3">
             Generated Summary

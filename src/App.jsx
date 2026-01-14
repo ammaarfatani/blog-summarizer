@@ -19,13 +19,11 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* PUBLIC ROUTES */}
           <Route path="/" element={<Home />} />
     <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
-          {/* PROTECTED ROUTES */}
           <Route
             element={
               <PrivateRoute>
