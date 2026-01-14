@@ -37,6 +37,24 @@ This project focuses on **authentication, Firestore data modeling, dashboards, a
 - **State Management:** React Context API
 - **Deployment:** Local / Ready for Firebase Hosting
 
+---
+
+🔮 Future Improvements
+
+🤖 OpenAI-powered automatic summarization
+
+☁ Firebase Cloud Functions
+
+📄 Export summaries as PDF / TXT
+
+🔗 Share summaries via link
+
+📈 Advanced analytics
+
+▶️ Live Demo
+
+🚧 https://ai-blog-summarizer-a5624.web.app/
+
 > ⚠️ **Note:**  
 > AI-based summarization (OpenAI API) and Firebase Cloud Functions were **planned but not implemented** in this version.
 
